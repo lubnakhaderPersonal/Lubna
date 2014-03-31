@@ -28,19 +28,19 @@ nextButton = (Button)findViewById(R.id.nextbutton);
 nextButton.setOnClickListener(this);
 //File clip=new File(Environment.getExternalStorageDirectory(),
 //"test.mp4");
-String videoName = "test";
+String videoName = "introvideo";
 int id = getResources().getIdentifier(videoName, "raw", getPackageName());
 final String path = "android.resource://" + getPackageName() + "/" + id;
 
 //vvBgVideo.setVideoURI(Uri.parse(path));
-/*video=(VideoView)findViewById(R.id.video);
+video=(VideoView)findViewById(R.id.video);
 //video.setVideoPath(clip.getAbsolutePath());
 video.setVideoURI(Uri.parse(path));
 ctlr=new MediaController(this);
 ctlr.setMediaPlayer(video);
 video.setMediaController(ctlr);
 video.start();
-video.requestFocus();*/
+video.requestFocus();
 
 }
 @Override
