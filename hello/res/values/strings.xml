@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PowerOfGlasses</string>
+    <string name="action_settings">Settings</string>
+    <string name="left_lens_measurement">Take a pic with left lens in front of the camera.</string>
+    <string name="right_lens_measurement">Take a pic with the right lens in front of the camera.</string>
+    <string name="normal_lens_measurement">Take a pic without any lens.</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="foldername">Glasses</string>
+    <string name="redo">Redo</string>
+    <string name="proceed">Proceed</string>
+    <string name="nextstep">Next Step</string>
+    <string name="resultsimage">Results on the glass image</string>
+    <string name="resultsstring">Calculated power </string>
+    <string name="introduction">Introductory video</string>
+    <string name="next">Next</string>
+    <string name="name">Name:</string>
+    <string name="saveresults">Save Results</string>
+    <string name="exitapp">Exit</string>
+    <string name="date">Set Date</string>
+    <string name="time">Set Time</string>
+    <string name="power">Power</string>
+    <string name="left">Left:</string>
+    <string name="right">Right:</string>
+    <string name="history">History</string>
+    <string name="leftlenspower">Left Lens Power:</string>
+    <string name="rightlenspower">Right Lens Power:</string>
+</resources>

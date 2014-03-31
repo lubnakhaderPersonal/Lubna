@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <ListView android:id="@+id/spinner"
+    android:layout_width="match_parent"
+    android:layout_height = "250sp"
+    />
+    
+    <TextView 
+    android:id="@+id/historyNameBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/name"
+    android:layout_below="@id/spinner"
+    android:layout_alignParentLeft="true"
+    android:layout_marginRight="10sp"
+    style="@style/CodeFont"/>
+    
+    <TextView 
+    android:id="@+id/history__name_Text_View"
+    android:layout_toRightOf="@id/historyNameBox"
+    android:layout_below = "@id/spinner"
+	android:layout_height="wrap_content"
+	android:layout_width="300sp"
+	style="@style/CodeFont"
+    android:layout_marginLeft = "20sp"
+	/>
+    
+    <TextView 
+    android:id="@+id/historyLeftBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/historyNameBox"
+    android:layout_marginTop = "35sp"
+    android:layout_alignParentLeft="true"
+    android:text = "@string/leftlenspower"
+    style="@style/CodeFont"/>
+    
+    <TextView 
+    android:id="@+id/historyLeftPowerDisplay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/historyLeftBox"
+    android:layout_below = "@id/history__name_Text_View"
+    android:layout_marginTop="35sp"
+    android:layout_marginLeft = "30sp"
+    style="@style/CodeFont"/>
+     
+    <TextView 
+    android:id="@+id/historyRightBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/historyLeftBox"
+    android:layout_marginTop = "35sp"
+    android:layout_alignParentLeft="true"
+    android:text = "@string/rightlenspower"
+    style="@style/CodeFont"/>
+    
+      <TextView 
+    android:id="@+id/historyRightPowerDisplay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/historyRightBox"
+    android:layout_below = "@id/historyLeftPowerDisplay"
+    android:layout_marginTop = "35sp"
+    android:layout_marginLeft = "30sp"
+    style="@style/CodeFont"/>   
+</RelativeLayout>

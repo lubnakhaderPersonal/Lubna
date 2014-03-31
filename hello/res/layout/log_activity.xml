@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/glassforappicon" >
+    
+    <TextView 
+    android:id="@+id/nameTextBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/name"
+    android:layout_alignParentLeft="true"
+    android:layout_marginRight="10sp"
+    style="@style/CodeFont"/>
+    
+    <AutoCompleteTextView 
+    android:id="@+id/autocomplete_textbox"
+    android:layout_toRightOf="@id/nameTextBox"
+	android:layout_height="wrap_content"
+	android:layout_width="300sp"
+	android:singleLine ="true"
+	android:completionThreshold="2"/>
+    
+    <Button
+    android:id="@+id/datebutton"
+    android:layout_below="@id/autocomplete_textbox"
+    android:layout_alignParentLeft="true"
+    style="@style/CustomStyleButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="20sp"
+    android:text="@string/date"/>
+    
+    <TextView 
+    android:id="@+id/dateTextBox"
+    android:layout_width="300sp"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/datebutton"
+    android:layout_below="@id/autocomplete_textbox"
+    android:gravity="center_horizontal"
+    android:layout_marginTop = "28sp"
+    style="@style/CodeFont"/>
+    
+    <Button
+    android:id="@+id/timebutton"
+    android:layout_below="@id/datebutton"
+    android:layout_alignParentLeft="true"
+    style="@style/CustomStyleButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginTop="20sp"
+    android:text="@string/time"/>
+    
+    <TextView 
+    android:id="@+id/timeTextBox"
+    android:layout_width="300sp"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@id/timebutton"
+    android:layout_below="@id/dateTextBox"
+    android:layout_marginTop = "35sp"
+    android:gravity="center_horizontal"
+    style="@style/CodeFont"/>
+    
+    <TextView 
+    android:id="@+id/powerTextBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/timeTextBox"
+    android:layout_marginTop = "35sp"
+    android:layout_centerHorizontal="true"
+    android:text="@string/power"
+    style="@style/CodeFont"/>
+    
+    <TextView 
+    android:id="@+id/leftTextBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/powerTextBox"
+    android:layout_marginTop = "35sp"
+    android:layout_marginLeft = "20sp"
+    android:layout_alignParentLeft="true"
+    android:text = "@string/left"
+    style="@style/CodeFont"/>
+     
+    <TextView 
+    android:id="@+id/rightTextBox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/powerTextBox"
+    android:layout_marginTop = "35sp"
+    android:layout_marginRight = "20sp"
+    android:layout_alignParentRight="true"
+    android:text = "@string/right"
+    style="@style/CodeFont"/>
+    
+    <Button
+    android:id="@+id/historybutton"
+    android:layout_below="@id/rightTextBox"
+    android:layout_alignParentLeft="true"
+    style="@style/CustomStyleButton"
+    android:layout_marginTop="50sp"
+    android:layout_marginRight = "20sp"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="@string/history"/> 
+    
+    <Button
+    android:id="@+id/savelogbutton"
+    android:layout_toRightOf="@+id/historybutton"
+    android:layout_below = "@id/rightTextBox"
+    android:layout_alignParentRight="true"
+    style="@style/CustomStyleButton"
+    android:layout_width="200dp"
+    android:layout_marginTop="50sp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="@string/saveresults"/>
+     
+   
+</RelativeLayout>

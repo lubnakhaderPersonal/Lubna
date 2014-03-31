@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+   <ImageView 
+	android:id="@+id/resultsimage"
+	android:layout_width="match_parent"
+	android:layout_height="330sp"
+	android:adjustViewBounds="true"
+	android:src="@drawable/glassforresults"
+	android:visibility="visible"
+	android:layout_centerVertical="true"
+	android:contentDescription="@string/resultsimage"/> 
+	
+   <TextView
+        android:id="@+id/resultsheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/resultsimage"
+        android:layout_marginBottom= "20sp"
+        android:gravity="center"        
+        style="@style/CodeFont"
+        android:text = "@string/resultsstring"/>
+    
+    <TextView
+        android:id="@+id/resultstextboxleft"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight= "15sp"
+        android:textStyle="bold"
+        android:layout_alignParentRight = "true"
+        style="@style/CodeFont.Results"
+        android:text = "@string/resultsstring"/>
+     <TextView
+        android:id="@+id/resultstextboxright"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft= "70sp"
+        android:textStyle="bold"
+        android:layout_alignParentLeft="true"
+        style="@style/CodeFont.Results"
+        android:text = "@string/resultsstring"/>
+     <Button
+    android:id="@+id/savebutton"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    style="@style/CustomStyleButton"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="@string/saveresults"/>
+        
+    
+
+</RelativeLayout>
