@@ -51,6 +51,7 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
+    <color name="back">#f7faf7</color>
+    <color name="text">#5e615e</color>
 
 </resources>
