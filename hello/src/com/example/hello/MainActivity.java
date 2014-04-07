@@ -26,6 +26,7 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.graphics.PorterDuff;
 import android.hardware.Camera;
 
 import android.os.Bundle;
@@ -100,6 +101,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	//private TextView textBox;
 	private int stepNumber = 1;
 	int centerx,centery;
+	DrawOnTop mDraw;
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -118,7 +120,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 	   //get the textview
 		//textBox = (TextView)findViewById(R.id.textbox);
 		
-		DrawOnTop mDraw = new DrawOnTop(this); 
+		//DrawOnTop mDraw = new DrawOnTop(this); 
 		 Display dis1 = getWindowManager().getDefaultDisplay(); 
 		 Point size = new Point();
 		 dis1.getSize(size);
@@ -177,7 +179,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 			else
 			{
 				//requestWindowFeature(Window.FEATURE_NO_TITLE); 
-				DrawOnTop mDraw = new DrawOnTop(this); 
+				mDraw = new DrawOnTop(this); 
 				cameraPreview = new CameraPreview(this, mCamera);
 		        frameLayout = (FrameLayout) findViewById(R.id.camera_preview);
 		        frameLayout.addView(cameraPreview);
@@ -262,6 +264,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
  		        new PhotoHandler(getApplicationContext(),file_name,(MainActivity)this));
   // 	mCamera.stopPreview(); 
  	  mCamera.startPreview();
+ 	  
 	}
 	
 //call back received from photohandler 
@@ -277,6 +280,9 @@ public void pictureTaken()
 //the user selecting to proceed
 public void proceedToNextStep()
 {
+	 DrawOnTop mDraw2 = new DrawOnTop(this);
+ 	 // mDraw2.clearCanvas();
+ 	 frameLayout.addView(mDraw2);
 	switch(stepNumber)
 	{
 	
@@ -308,6 +314,7 @@ public void proceedToNextStep()
 	    Asycdialog.hide();
 	    //Fire the second activity
 	    startActivity(i);
+	   
 		break;
 	default :
 		break;
@@ -538,7 +545,7 @@ public void saveImage(Bitmap data,String name) {
 	class DrawOnTop extends View { 
 	
 		 private Paint textPaint = new Paint();
-		    
+		    private Canvas can;
 			public DrawOnTop(Context context) {
 				super(context);
 				// Create out paint to use for drawing
@@ -552,9 +559,12 @@ public void saveImage(Bitmap data,String name) {
 			
 			@Override
 		    protected void onDraw(Canvas canvas){
+				can = canvas;
 				Log.d("centers",Integer.toString(centerx)+"   "+Integer.toString(centery));
 				// A Simple Text Render to test the display
 				String t="";
+				
+				
 				switch(stepNumber)
 				{
 					
@@ -567,10 +577,29 @@ public void saveImage(Bitmap data,String name) {
 				case 3:
 					t="Take a picture with the right lens";
 				}
-				
-				
-		        //canvas.drawText(t, 50, 50, textPaint);
+		        canvas.drawText(t, 50, 50, textPaint);
 		        canvas.drawCircle(centerx, centery, 10, textPaint);
+			}
+			
+			public void clearCanvas()
+			{
+				String t="";
+				switch(stepNumber)
+				{
+		
+				case 1:
+					t="Take a picture with the left lens";
+					break;
+				case 2:
+					t="Take a picture with the right lens";
+					break;
+				default:
+					t="Take a picture without lenses";
+					break;
+				}
+				can.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
+				can.drawText(t, 50, 50, textPaint);
+		        can.drawCircle(centerx, centery, 10, textPaint);
 			}
 	
 	} 

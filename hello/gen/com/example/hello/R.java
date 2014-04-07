@@ -10,6 +10,10 @@ package com.example.hello;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int back=0x7f080000;
+        public static final int text=0x7f080001;
+    }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
 
@@ -48,38 +52,38 @@ public final class R {
         public static final int trial_photo=0x7f020018;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001f;
-        public static final int autocomplete_textbox=0x7f090010;
-        public static final int camera_preview=0x7f090002;
-        public static final int container=0x7f090000;
-        public static final int dateTextBox=0x7f090012;
-        public static final int datebutton=0x7f090011;
-        public static final int historyLeftBox=0x7f090007;
-        public static final int historyLeftPowerDisplay=0x7f090008;
-        public static final int historyNameBox=0x7f090005;
-        public static final int historyRightBox=0x7f090009;
-        public static final int historyRightPowerDisplay=0x7f09000a;
-        public static final int history__name_Text_View=0x7f090006;
-        public static final int historybutton=0x7f090018;
-        public static final int imageButton1=0x7f09000b;
-        public static final int imageButton2=0x7f09000d;
-        public static final int imageSwitcher1=0x7f09000c;
-        public static final int leftTextBox=0x7f090016;
-        public static final int nameTextBox=0x7f09000f;
-        public static final int nextbutton=0x7f09000e;
-        public static final int powerTextBox=0x7f090015;
-        public static final int resultsheading=0x7f09001b;
-        public static final int resultsimage=0x7f09001a;
-        public static final int resultstextboxleft=0x7f09001c;
-        public static final int resultstextboxright=0x7f09001d;
-        public static final int rightTextBox=0x7f090017;
-        public static final int savebutton=0x7f09001e;
-        public static final int savelogbutton=0x7f090019;
-        public static final int spinner=0x7f090004;
-        public static final int take_picture_button=0x7f090003;
-        public static final int textbox=0x7f090001;
-        public static final int timeTextBox=0x7f090014;
-        public static final int timebutton=0x7f090013;
+        public static final int action_settings=0x7f0a001f;
+        public static final int autocomplete_textbox=0x7f0a0010;
+        public static final int camera_preview=0x7f0a0002;
+        public static final int container=0x7f0a0000;
+        public static final int dateTextBox=0x7f0a0012;
+        public static final int datebutton=0x7f0a0011;
+        public static final int historyLeftBox=0x7f0a0007;
+        public static final int historyLeftPowerDisplay=0x7f0a0008;
+        public static final int historyNameBox=0x7f0a0005;
+        public static final int historyRightBox=0x7f0a0009;
+        public static final int historyRightPowerDisplay=0x7f0a000a;
+        public static final int history__name_Text_View=0x7f0a0006;
+        public static final int historybutton=0x7f0a0018;
+        public static final int imageButton1=0x7f0a000b;
+        public static final int imageButton2=0x7f0a000d;
+        public static final int imageSwitcher1=0x7f0a000c;
+        public static final int leftTextBox=0x7f0a0016;
+        public static final int nameTextBox=0x7f0a000f;
+        public static final int nextbutton=0x7f0a000e;
+        public static final int powerTextBox=0x7f0a0015;
+        public static final int resultsheading=0x7f0a001b;
+        public static final int resultsimage=0x7f0a001a;
+        public static final int resultstextboxleft=0x7f0a001c;
+        public static final int resultstextboxright=0x7f0a001d;
+        public static final int rightTextBox=0x7f0a0017;
+        public static final int savebutton=0x7f0a001e;
+        public static final int savelogbutton=0x7f0a0019;
+        public static final int spinner=0x7f0a0004;
+        public static final int take_picture_button=0x7f0a0003;
+        public static final int textbox=0x7f0a0001;
+        public static final int timeTextBox=0x7f0a0014;
+        public static final int timebutton=0x7f0a0013;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -91,7 +95,7 @@ public final class R {
         public static final int results_layout=0x7f030006;
     }
     public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int main=0x7f090000;
     }
     public static final class raw {
         public static final int introvideo=0x7f040000;
